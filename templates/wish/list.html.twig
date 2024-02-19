@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+
+        <div class="card">
+            <div class="card-body couleurfondcard">
+                <h3 class="text-center">Wish List : </h3>
+                <ul class="list-group list-group-flush">
+                    {% for wish in bucketlist %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">
+                            <div>
+                                {{ wish.title }} | {{ wish.category.name }}
+                            </div>
+                            <div>
+                                <a type="button" class="btn custom-btn"
+                                   href="{{ path('app_wish_detail', {'id': wish.id}) }}">Details</a>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                <a type="button" class="btn custom-btn"
+                                   href="{{ path('app_wish_update', {'id': wish.id}) }}">Update</a>
+                                <a type="button" class="btn custom-btn"
+                                   href="{{ path('app_wish_delete', {'id': wish.id}) }}">Delete</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endfor %}
+
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+{% endblock %}

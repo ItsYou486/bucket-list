@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="card container couleurfondcard p-3" style="max-width: 800px">
+    <h3 class="text-center">Bucket creation</h3>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <div class="d-flex justify-content-center">
+        <button type="submit" class="btn custom-btn mb-3 mx-3" >Submit</button>
+        <a type="button" class="btn custom-btn mb-3 mx-3" href="{{ path('app_wish_list') }}">Back</a>
+        </div>
+        {{ form_errors(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}BucketList detail{% endblock %}
+
+{% block body %}
+
+<div class="card">
+    <div class="card-body couleurfondcard">
+        <h3 class="text-center p-3">Bucket detail</h3>
+
+    <ul class="list-group list-group-flush">
+
+        {% for key, info in detailBucketList %}
+            <li class="list-group-item couleurfonddiv mb-3">{{ key }} : {{ info }}</li>
+        {% endfor %}
+
+        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">Title : {{ detailBucketList.title }}</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">Description : {{ detailBucketList.description }}</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">Author : {{ detailBucketList.author }}</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">Date Created : {{ detailBucketList.dateCreated|date('d/m/Y') }}</li>
+        <li class="list-group-item d-flex justify-content-between align-items-center couleurfonddiv mb-3">Category : {{ detailBucketList.category.name }}</li>
+{#        <li class="list-group-item">Date Uptated : {{ detailBucketList.dateUptated|date('d/m/Y') }}</li>#}
+
+
+        <div class="d-flex justify-content-center mb-3">
+        <img class="imgbucket" src="{{ asset(poster_dir ~ '/' ~ detailBucketList.posterFile) }}" alt="">
+        </div>
+        <a type="button" class="btn custom-btn" href="{{ path('app_wish_list') }}">Back</a>
+    </ul>
+
+    </div>
+
+    </div>
+
+{% endblock %}
+

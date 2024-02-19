@@ -1,3 +1,63 @@
 body {
-    background-color: skyblue;
+    background-color: #F2B988;
+
+}
+
+header{
+    background-color: #59261B;
+}
+
+.white-text {
+    color: white; /* Définit la couleur du texte en blanc */
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #59261B;
+    color: white;
+
+}
+
+.white-icon {
+    filter: invert(100%);
+}
+
+.couleurfondcard{
+background-color: #D9663D;
+    border-radius: 5px;
+    border: black 1px solid;
+}
+
+.couleurfonddiv{
+    background-color: #F2B988;
+    border-radius: 5px;
+}
+
+.couleurfonddiv:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Ajouter un arrondi aux coins inférieurs du dernier <li> */
+.couleurfonddiv:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.custom-btn {
+    background-color: #59261B; /* Remplacez "your_custom_color" par votre couleur personnalisée */
+    color: #fff; /* Couleur du texte */
+}
+
+.imgbucket{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: black 1px solid;
+}
+
+.btn:hover{
+    background-color: #A6523F;
+    color: #fff;
 }
